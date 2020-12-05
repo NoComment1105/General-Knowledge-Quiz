@@ -58,6 +58,13 @@ if answerQ7 == "Are you asleep yet?":
 else:
      print("Incorrect, the answer is: 'Are you asleep yet?\n'")
 
+answerQ8 = input("The sun rises in the east and sets in the ____ ")
+if answerQ8 == "west" or "West":
+     print("Correct\n")
+     counter = counter + 1
+else:
+     print("Unlucky. The answer is West")
+
 counterstr = str(counter)
 with open("highscores.txt","a") as file:
      file.write(counterstr + "\n")
