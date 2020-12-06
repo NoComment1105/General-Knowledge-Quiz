@@ -31,7 +31,7 @@ else:
      print("Unlucky. The correct answer is Lisbon\n")
 
 answerQ4 = input("Who created the police force? was it a) Alan Turing  b) Clint Eastwood c) Robert Peel  d) Bob Unwrap (answer with letter) ")
-if answerQ4 == "C" or "c":
+if answerQ4 == "c":
      print("Correct\n")
      counter = counter + 1
 else:
@@ -59,11 +59,41 @@ else:
      print("Incorrect, the answer is: 'Are you asleep yet?\n'")
 
 answerQ8 = input("The sun rises in the east and sets in the ____ ")
-if answerQ8 == "west" or "West":
+if answerQ8 == "west":
      print("Correct\n")
      counter = counter + 1
 else:
-     print("Unlucky. The answer is West")
+     print("Unlucky. The answer is west")
+
+answerQ9 = int(input("How many aces are there in a deck of cards? (enter integer)"))
+if answerQ9 == 4:
+     print("Well done, Correct")
+     counter = counter + 1
+else:
+     print("Incorrect, the answer is 4, spades hearts clubs and diamonds")
+
+answerQ10 = input("Round and round the ______ like a teddy bear one step two step tickly under there")
+if answerQ10 == "garden":
+     print("Correct :)")
+     counter = counter + 1
+else:
+     print("Incorrect, the answer is garden")
+
+answerQ11 = input("What is longer, a Nautical mile or a mile?")
+if answerQ11 == "Nautical mile":
+     print("Correct! a Nautical Mile is 1.15 miles")
+     counter = counter + 1
+else:
+     print("Incorrect, a Nautical mile is longer, it is 1.15 miles")
+
+answerQ12 = input("Ben Stokes inspired England’s 2019 Cricket World Cup final victory over New Zealand – who scored the second-highest number of runs in the match for England?")
+if answerQ12 == "Jos Buttler":
+     print("Correct, it was a spectacular display of cricket")
+     counter = counter + 1
+else:
+     print("Unlucky, the answer is Jos Buttler")
+
+
 
 counterstr = str(counter)
 with open("highscores.txt","a") as file:
