@@ -1,5 +1,5 @@
 #This is a quiz that takes in data of each player and records their highscore
-print("Good Morning, Good evening, Good night, Good Day, Welcome to this fabulous general knowledge quiz i have concocted. It asks for your name and some other things and stores them so you can track your high score even when you close the program")
+print("Good Morning, Good evening, Good night, Good Day, Welcome to this general knowledge quiz. It asks for your name and some other things and stores them so you can track your high score even when you close the program")
 players=[]
 with open("highscores.txt","r") as InFile:
      line=InFile.readline()
@@ -69,25 +69,39 @@ if answerQ8 == "west":
 else:
      print("Unlucky. The answer is west\n")
 
-answerQ9 = int(input("How many aces are there in a deck of cards? (enter integer)"))
+answerQ9 = int(input("How many aces are there in a deck of cards? (enter integer) "))
 if answerQ9 == 4:
      print("Well done, Correct\n")
      counter = counter + 1
 else:
-     print("Incorrect, the answer is 4, spades hearts clubs and diamonds")
+     print("Incorrect, the answer is 4, spades hearts clubs and diamonds\n")
 
-answerQ10 = input("Round and round the ______ like a teddy bear one step two step tickly under there")
+answerQ10 = input("Round and round the ______ like a teddy bear one step two step tickly under there ")
 if answerQ10 == "garden":
      print("Correct :)\n")
      counter = counter + 1
 else:
-     print("Incorrect, the answer is garden")
+     print("Incorrect, the answer is garden\n")
+
+answerQ11 = input("Who was the 27th president of the United States of America? ")
+if answerQ11 == "William Howard Taft":
+     print("Correct, Well Done!\n")
+     counter = counter + 1
+else:
+     print("Incorrect, the correct answer is: William Howard Taft\n")
+
+answerQ12 = input("What is the 5th planet from the sun? ")
+if answerQ12 == "Jupiter":
+     print("Correct!\n")
+     counter = counter + 1
+else:
+     print("Sorry, but the answer is: Jupiter\n")
 
 
 counterstr = str(counter)
 with open("highscores.txt","a") as file1:
                file1.write(name+","+age+","+shoeSize+","+counterstr+"\n")
-               
+
 print("Well Done! You have completed this quiz; you scored:", counter, "Whoop!")
 
 for i in range(len(players)):
